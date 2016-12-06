@@ -20,7 +20,7 @@ public class PushbotTeleOpArmMotor extends OpMode{
 
         HardwarePushbot robot       = new HardwarePushbot(); // use the class created to define a Pushbot's hardware
 
-        final double ROBOT_SPEED_FORWARD = -1;
+        final double ROBOT_SPEED_FORWARD = -.3;
         final double ROBOT_SPEED_BACKWARDS = -1*(ROBOT_SPEED_FORWARD);
 
         final double DEAD_ZONE = .1;
@@ -51,11 +51,11 @@ public class PushbotTeleOpArmMotor extends OpMode{
         //right = -gamepad2.right_stick_x;
 
             if(left > DEAD_ZONE) {
-                robot.armMotor.setPower(1);
+                robot.armMotor.setPower(.1);
             }
 
             else if(left < DEAD_ZONE_LOWER) {
-                robot.armMotor.setPower(-1);
+                robot.armMotor.setPower(-.1 );
             }
             else {
                 robot.armMotor.setPower (0);
